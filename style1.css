@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     justify-content: center;
     justify-items: center;
+    background-color: #E2CCC6;
 }
 .container {
     width: 600px;
@@ -50,12 +51,6 @@ body {
 .color-buttons button {
     border-radius: 10px;
     background-color: darkslategray;
-    color: white;
-    padding: 10px;
-}
-.resetbutton {
-    border-radius: 10px;
-    background-color: red;
     color: white;
     padding: 10px;
 }
