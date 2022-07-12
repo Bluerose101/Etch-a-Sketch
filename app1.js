@@ -1,5 +1,8 @@
 const container = document.querySelector('.container');
 const resizeButton = document.querySelector('.resize-button button');
+const resetButton= document.createElement('button');
+const BlackButton = document.createElement('button');
+const colorButton_div = document.querySelector('.color-buttons');
 
 //create grids
 let sizeOfGrid = 16;
@@ -38,19 +41,24 @@ resizeButton.addEventListener('click',() => {
     createGrid(userSize);
 })
 
-
+// create reset button
+resetButton.textContent = "RESET";
+resetButton.addEventListener('click', () => {
+    reSet();
+});
+colorButton_div.appendChild(resetButton).classList.add('button');
 
 
 //create color button
 function blackColor() {
    
     const boxes = container.querySelectorAll('.grid-box')
-    btnBlack.textContent = 'BLACK';
-    btnBlack.addEventListener('click', function () {
-        boxs.forEach(box => box.addEventListener('mouseover', function() {
-            this.style.background = 'black'
+    BlackButton.textContent = 'BLACK';
+    BlackButton.addEventListener('click', function () {
+        boxes.forEach(box => box.addEventListener('mouseenter', function() {
+            box.style.background = 'black'
         }))
     })
-    buttonsContainer.appendChild(btnBlack).classList.add('btn')
+    colorButton_div.appendChild(BlackButton).classList.add('button')
 }
 blackColor() 
